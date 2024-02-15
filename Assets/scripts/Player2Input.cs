@@ -35,7 +35,7 @@ public class Player2Input : MonoBehaviour
         {
         moveVelocity.y = jumpSpeed;
         jumpCount--;
-        Debug.Log(jumpCount);
+        Debug.Log("Player 1 has "+jumpCount);
         }
         }
         //Adding gravity
