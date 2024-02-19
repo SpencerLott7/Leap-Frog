@@ -16,7 +16,7 @@ public class WinCondition : MonoBehaviour
     {
         if(coins.Length == 0)
         {
-        Debug.Log("Hey Bro");
+        Application.Quit();
         }
     }
 }

@@ -27,12 +27,12 @@ public class AddJump : MonoBehaviour
         if(other.CompareTag("P1"))
         {
             jump1_script.jumpCount++;
-            gameObject.SetActive(false);
+            Destroy(gameObject, 0);
         }
         else if(other.CompareTag("P2"))
         {
             jump2_script.jumpCount++;
-            gameObject.SetActive(false);
+            Destroy(gameObject, 0);
         }
     }
 }
