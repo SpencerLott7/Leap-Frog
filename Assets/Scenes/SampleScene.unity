@@ -2819,6 +2819,22 @@ PrefabInstance:
       propertyPath: P2
       value: 
       objectReference: {fileID: 1057342186}
+    - target: {fileID: 942240083296371500, guid: 80bfd148ff550624baa0539d88dcc448, type: 3}
+      propertyPath: jumps1L
+      value: 
+      objectReference: {fileID: 636659130}
+    - target: {fileID: 942240083296371500, guid: 80bfd148ff550624baa0539d88dcc448, type: 3}
+      propertyPath: jumps2L
+      value: 
+      objectReference: {fileID: 2069897878}
+    - target: {fileID: 942240083296371500, guid: 80bfd148ff550624baa0539d88dcc448, type: 3}
+      propertyPath: points1L
+      value: 
+      objectReference: {fileID: 43495656}
+    - target: {fileID: 942240083296371500, guid: 80bfd148ff550624baa0539d88dcc448, type: 3}
+      propertyPath: points2L
+      value: 
+      objectReference: {fileID: 228914811}
     - target: {fileID: 2574787494718318481, guid: 80bfd148ff550624baa0539d88dcc448, type: 3}
       propertyPath: m_Name
       value: Player1

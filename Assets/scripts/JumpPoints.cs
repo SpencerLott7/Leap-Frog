@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class JumpPoints : MonoBehaviour
 {
     public GameObject P1;
     public GameObject P2;
+
+    public TMP_Text points1L;
+    public TMP_Text points2L;
+
+    public TMP_Text jumps1L;
+    public TMP_Text jumps2L;
 
     private PlayerInput jump1_script;
     private Player2Input jump2_script;
@@ -24,7 +31,11 @@ public class JumpPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        points1L.text= P1Points.ToString();
+        points2L.text= P2Points.ToString();
+
+        jumps1L.text= jump1_script.jumpCount.ToString();
+        jumps2L.text= jump2_script.jumpCount.ToString();
     }
     void OnTriggerEnter(Collider other)
     {
