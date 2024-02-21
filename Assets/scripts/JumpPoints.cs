@@ -24,6 +24,7 @@ public class JumpPoints : MonoBehaviour
     {
         jump1_script = P1.GetComponent<PlayerInput>();
         jump2_script = P2.GetComponent<Player2Input>();
+
         P1Points = 0;
         P2Points = 0;
     }
@@ -31,11 +32,20 @@ public class JumpPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        points1L.text= P1Points.ToString();
-        points2L.text= P2Points.ToString();
+        points1L.text= "Player 1 has "+P1Points.ToString();
+        points2L.text= "Player 2 has "+P2Points.ToString();
 
         jumps1L.text= jump1_script.jumpCount.ToString();
         jumps2L.text= jump2_script.jumpCount.ToString();
+
+        if(P1Points>=4){
+            jump1_script.speed=0;
+            jump2_script.speed=0;
+        }
+        else if(P2Points>=4){
+            jump1_script.speed=0;
+            jump2_script.speed=0;
+        }
     }
     void OnTriggerEnter(Collider other)
     {
