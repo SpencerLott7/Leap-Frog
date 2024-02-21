@@ -7,6 +7,7 @@ public class JumpPoints : MonoBehaviour
 {
     public GameObject P1;
     public GameObject P2;
+    public TMP_Text winlabel;
 
     public TMP_Text points1L;
     public TMP_Text points2L;
@@ -32,8 +33,8 @@ public class JumpPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        points1L.text= "Player 1 has "+P1Points.ToString();
-        points2L.text= "Player 2 has "+P2Points.ToString();
+        points1L.text = "Player 1 has "+P1Points.ToString();
+        points2L.text = "Player 2 has "+P2Points.ToString();
 
         jumps1L.text= jump1_script.jumpCount.ToString();
         jumps2L.text= jump2_script.jumpCount.ToString();
@@ -41,10 +42,12 @@ public class JumpPoints : MonoBehaviour
         if(P1Points>=4){
             jump1_script.speed=0;
             jump2_script.speed=0;
+            winlabel.text = "Player 1 Wins";
         }
         else if(P2Points>=4){
             jump1_script.speed=0;
             jump2_script.speed=0;
+            winlabel.text = "Player 2 Wins";
         }
     }
     void OnTriggerEnter(Collider other)
