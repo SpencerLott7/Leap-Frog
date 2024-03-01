@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     public float gravity = -20f;
     public float jumpSpeed = 20;
 
-    public int jumpCount; 
+    
 
     CharacterController characterController;
     Vector3 moveVelocity;
@@ -19,7 +19,7 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
          characterController = GetComponent<CharacterController>();
-         jumpCount=1;
+        
     }
 
     // Update is called once per frame
@@ -31,11 +31,11 @@ public class PlayerInput : MonoBehaviour
         {
         moveVelocity = transform.forward * speed * vInput;
         turnVelocity = transform.up * rotationSpeed * hInput;
-        if(Input.GetButtonDown("Jump") && jumpCount>=1)
+        if(Input.GetButtonDown("Jump") && Managers.Player.jumpCount>=1)
         {
         moveVelocity.y = jumpSpeed;
-        jumpCount--;
-        Debug.Log("Player 1 has " + jumpCount);
+        Managers.Player.subJump;
+    
         }
         }
         //Adding gravity

@@ -14,61 +14,42 @@ public class JumpPoints : MonoBehaviour
 
     public TMP_Text jumps1L;
     public TMP_Text jumps2L;
-
-    private PlayerInput jump1_script;
-    private Player2Input jump2_script;
-
-    public int P1Points;
-    public int P2Points;
     // Start is called before the first frame update
     void Start()
     {
-        jump1_script = P1.GetComponent<PlayerInput>();
-        jump2_script = P2.GetComponent<Player2Input>();
-
-        P1Points = 0;
-        P2Points = 0;
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-        points1L.text = "Player 1 has "+P1Points.ToString();
-        points2L.text = "Player 2 has "+P2Points.ToString();
+        points1L.text = "Player 1 has "+Managers.Player.health.ToString();
+        //points2L.text = "Player 2 has "+P2Points.ToString();
 
-        jumps1L.text= jump1_script.jumpCount.ToString();
-        jumps2L.text= jump2_script.jumpCount.ToString();
-
-        if(P1Points>=4){
-            jump1_script.speed=0;
-            jump2_script.speed=0;
-            winlabel.text = "Player 1 Wins";
+        jumps1L.text= Managers.Player.jumpCount.ToString();
+        //jumps2L.text= .ToString();
         }
-        else if(P2Points>=4){
-            jump1_script.speed=0;
-            jump2_script.speed=0;
-            winlabel.text = "Player 2 Wins";
-        }
-    }
+    
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("P2"))
         {
         float pos1=P1.transform.position.y;
         float pos2=P2.transform.position.y;
-        if(pos1>pos2){
+        /*if(pos1>pos2){
             P1Points++;
-            jump1_script.jumpCount++;
+            Managers.Player.addJump;
             Debug.Log("Blue has "+P1Points);
         }
         else if(pos1<pos2)
         {
-            P2Points++;
+            Managers.Player.ChangeHealth(-1);
             jump2_script.jumpCount++;
             Debug.Log("Red has "+P2Points);
         }
         else{
-        }
+        }*/
         }
     }
 }
+
