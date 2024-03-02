@@ -4,20 +4,29 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerManager))]
 [RequireComponent(typeof(InventoryManager))]
+[RequireComponent(typeof(PlayerManager2))]
+[RequireComponent(typeof(InventoryManager2))]
 
 public class Managers : MonoBehaviour {
 	public static PlayerManager Player {get; private set;}
 	public static InventoryManager Inventory {get; private set;}
+	public static PlayerManager2 Player2 {get; private set;}
+	public static InventoryManager2 Inventory2 {get; private set;}
+
 
 	private List<IGameManager> startSequence;
 	
 	void Awake() {
 		Player = GetComponent<PlayerManager>();
 		Inventory = GetComponent<InventoryManager>();
+		Player2 = GetComponent<PlayerManager2>();
+		Inventory2 = GetComponent<InventoryManager2>();
 
 		startSequence = new List<IGameManager>();
 		startSequence.Add(Player);
 		startSequence.Add(Inventory);
+		startSequence.Add(Player2);
+		startSequence.Add(Inventory2);
 
 		StartCoroutine(StartupManagers());
 	}

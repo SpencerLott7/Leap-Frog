@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour, IGameManager {
+public class PlayerManager2 : MonoBehaviour, IGameManager {
 	public ManagerStatus status {get; private set;}
 
 	public int health {get; private set;}

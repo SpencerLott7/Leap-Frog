@@ -24,10 +24,10 @@ public class JumpPoints : MonoBehaviour
     void Update()
     {
         points1L.text = "Player 1 has "+Managers.Player.health.ToString();
-        //points2L.text = "Player 2 has "+P2Points.ToString();
+        points2L.text = "Player 2 has "+Managers.Player2.health.ToString();
 
         jumps1L.text= Managers.Player.jumpCount.ToString();
-        //jumps2L.text= .ToString();
+        jumps2L.text= Managers.Player2.jumpCount.ToString();
         }
     
     void OnTriggerEnter(Collider other)
@@ -36,19 +36,19 @@ public class JumpPoints : MonoBehaviour
         {
         float pos1=P1.transform.position.y;
         float pos2=P2.transform.position.y;
-        /*if(pos1>pos2){
-            P1Points++;
-            Managers.Player.addJump;
-            Debug.Log("Blue has "+P1Points);
+        if(pos1>pos2){
+            Managers.Player2.ChangeHealth(-1);
+            Managers.Player.addJump(1);
+            Debug.Log("Red has "+Managers.Player2.health);
         }
         else if(pos1<pos2)
         {
             Managers.Player.ChangeHealth(-1);
-            jump2_script.jumpCount++;
-            Debug.Log("Red has "+P2Points);
+            Managers.Player2.addJump(1);
+            Debug.Log("Blue has "+Managers.Player.health);
         }
         else{
-        }*/
+        }
         }
     }
 }
