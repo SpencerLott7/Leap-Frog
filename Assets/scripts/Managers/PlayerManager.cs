@@ -34,5 +34,6 @@ public class PlayerManager : MonoBehaviour, IGameManager {
 	public void addJump(int value)
 	{
 		jumpCount += value;
+		Debug.Log("added");
 	}
 }

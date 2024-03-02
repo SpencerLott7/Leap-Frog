@@ -39,4 +39,8 @@ public class Player2Input : MonoBehaviour
         characterController.Move(moveVelocity * Time.deltaTime);
         transform.Rotate(turnVelocity * Time.deltaTime);
     }
+    public void AppleSpeed()
+    {
+        speed=11;
+    }
 }
