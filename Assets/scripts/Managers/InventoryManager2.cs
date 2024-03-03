@@ -28,9 +28,6 @@ public class InventoryManager2 : MonoBehaviour, IGameManager {
 	public void AddItem(string name) {
 		if (items.ContainsKey(name)) {
 			items[name] += 1;
-            /*if(name == "Apple"){
-                PlayerInput2.AppleSpeed();
-            }*/
 		} else {
 			items[name] = 1;
 		}

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float speed = 8;
+    public float speed ;
     public float rotationSpeed = 90;
     public float gravity = -20f;
     public float jumpSpeed = 20;
@@ -17,6 +17,7 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
          characterController = GetComponent<CharacterController>();
+         speed=8;
     }
 
     // Update is called once per frame
@@ -39,5 +40,10 @@ public class PlayerInput : MonoBehaviour
         moveVelocity.y += gravity * Time.deltaTime;
         characterController.Move(moveVelocity * Time.deltaTime);
         transform.Rotate(turnVelocity * Time.deltaTime);
+    }
+    public void AppleSpeed()
+    {
+        speed=11;
+        Debug.Log("Yup");
     }
 }
