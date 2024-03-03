@@ -6,3 +6,10 @@ added player win condition which is 4 jumps.
 made it so that when a player wins the player freezes and the game is stopped.
 added a winning label that displays which player won.
 modified platforms to make movement easier.
+
+
+Unity 7:
+Moved scoring system as well as jump system into managers
+Added movable blocks around the map
+Added an item players can grab that increases their speed and is displayed in the inventory
+Changed the points into health point that decrease when the player is jumped over
