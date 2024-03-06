@@ -11,7 +11,7 @@ public class AddJump : MonoBehaviour
             Managers.Player.addJump(1);
             Destroy(gameObject, 0);
         }
-        else if(other.CompareTag("P2"))
+        if(other.CompareTag("P2"))
         {
             Managers.Player2.addJump(1);
             Destroy(gameObject, 0);

@@ -15,7 +15,7 @@ public class Boost : MonoBehaviour
             P1.GetComponent<PlayerInput>().AppleSpeed();
             Destroy(gameObject, 0);
         }
-        else if(other.CompareTag("P2"))
+        if(other.CompareTag("P2"))
         {
             Managers.Inventory2.AddItem("Apple");
             P2.GetComponent<Player2Input>().AppleSpeed();

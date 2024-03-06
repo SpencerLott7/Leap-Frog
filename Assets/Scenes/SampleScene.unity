@@ -1884,16 +1884,28 @@ PrefabInstance:
       value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3302055472624007762, guid: 18b3a8a236254fd4383db4cd5c6bc4ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 152.1793
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302055472624007762, guid: 18b3a8a236254fd4383db4cd5c6bc4ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 152.1793
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302055472624007762, guid: 18b3a8a236254fd4383db4cd5c6bc4ec, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 152.1793
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302055472624007762, guid: 18b3a8a236254fd4383db4cd5c6bc4ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.54
+      value: -39.58
       objectReference: {fileID: 0}
     - target: {fileID: 3302055472624007762, guid: 18b3a8a236254fd4383db4cd5c6bc4ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.7
+      value: 41.429
       objectReference: {fileID: 0}
     - target: {fileID: 3302055472624007762, guid: 18b3a8a236254fd4383db4cd5c6bc4ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.6
+      value: -2.5895
       objectReference: {fileID: 0}
     - target: {fileID: 3302055472624007762, guid: 18b3a8a236254fd4383db4cd5c6bc4ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2096,8 +2108,8 @@ SceneRoots:
   - {fileID: 2014922405}
   - {fileID: 1495255991}
   - {fileID: 705507995}
+  - {fileID: 371606338}
   - {fileID: 538418973}
   - {fileID: 4209509789081227170}
   - {fileID: 6604456345224682742}
-  - {fileID: 371606338}
   - {fileID: 1412144815345916387}
