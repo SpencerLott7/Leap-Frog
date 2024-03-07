@@ -7,7 +7,6 @@ public class PlayerManager2 : MonoBehaviour, IGameManager {
 
 	public int health {get; private set;}
 	public int maxHealth {get; private set;}
-	public int jumpCount {get;private set;}
 
 	public void Startup() {
 		Debug.Log("Player manager starting...");
@@ -15,7 +14,6 @@ public class PlayerManager2 : MonoBehaviour, IGameManager {
 		// these values could be initialized with saved data
 		health = 5;
 		maxHealth = 5;
-		jumpCount = 2;
 
 		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete
 		status = ManagerStatus.Started;
@@ -30,10 +28,5 @@ public class PlayerManager2 : MonoBehaviour, IGameManager {
 		}
 
 		Debug.Log($"Health: {health}/{maxHealth}");
-	}
-	public void addJump(int value)
-	{
-		jumpCount += value;
-        Debug.Log("added");
 	}
 }

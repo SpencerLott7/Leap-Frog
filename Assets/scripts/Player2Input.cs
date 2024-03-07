@@ -9,7 +9,7 @@ public class Player2Input : MonoBehaviour
     public float speed;
     public float rotationSpeed = 90;
     public float gravity = -20f;
-    public float jumpSpeed = 20;
+    public float jumpSpeed = 12;
 
     CharacterController characterController;
     Vector3 moveVelocity;
@@ -27,13 +27,12 @@ public class Player2Input : MonoBehaviour
         var vInput = Input.GetAxis("Vertical2");
         if(characterController.isGrounded)
         {
-        moveVelocity = transform.forward * speed * vInput;
-        turnVelocity = transform.up * rotationSpeed * hInput;
-        if(Input.GetButtonDown("Jump2") &&  Managers.Player2.jumpCount>=1)
-        {
-        moveVelocity.y = jumpSpeed;
-        Managers.Player2.addJump(-1);
-        }
+            moveVelocity = transform.forward * speed * vInput;
+            turnVelocity = transform.up * rotationSpeed * hInput;
+                if(Input.GetButtonDown("Jump2"))
+                {
+                    moveVelocity.y = jumpSpeed;
+                }
         }
         //Adding gravity
         moveVelocity.y += gravity * Time.deltaTime;
@@ -42,7 +41,6 @@ public class Player2Input : MonoBehaviour
     }
     public void AppleSpeed()
     {
-        speed=11;
         Debug.Log("Yup");
     }
 }

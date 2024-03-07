@@ -7,6 +7,7 @@ public class JumpPoints : MonoBehaviour
 {
     public GameObject P1;
     public GameObject P2;
+    
     public TMP_Text winlabel;
 
     public TMP_Text points1L;
