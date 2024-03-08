@@ -9,7 +9,7 @@ public class PlayerInput : MonoBehaviour
     public float speed ;
     public float rotationSpeed = 90;
     public float gravity = -20f;
-    public float jumpSpeed = 12;
+    public float jumpSpeed = 14;
 
     CharacterController characterController;
     Vector3 moveVelocity;
