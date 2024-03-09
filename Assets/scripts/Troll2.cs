@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Troll : MonoBehaviour
+public class Troll2 : MonoBehaviour
 {
     public Transform block;
     public Transform targetPosition;
@@ -14,7 +14,7 @@ public class Troll : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("P1"))
+        if (other.CompareTag("P2"))
         {
             isMoving = true;
         }
@@ -22,7 +22,7 @@ public class Troll : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("P1"))
+        if (other.CompareTag("P2"))
         {
             isMoving = false;
         }
