@@ -13,3 +13,8 @@ Moved scoring system as well as jump system into managers
 Added movable blocks around the map
 Added an item players can grab that increases their speed and is displayed in the inventory
 Changed the points into health point that decrease when the player is jumped over
+
+Unity 8:
+Changed the goal of the game to be cometitive sill based where each player races to get the apple on top of the tower.
+removed limited jumps and added trap platforms for players to use against each other. 
+redesigned playspace.
