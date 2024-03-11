@@ -9,6 +9,10 @@ public class Boost : MonoBehaviour
     public Transform start1;
     public Transform start2;
 
+    void Start()
+    {
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("P1"))
@@ -30,7 +34,7 @@ public class Boost : MonoBehaviour
 
     private void ResetPlayerPosition(Transform player, Transform startPosition)
     {
-        player.position = startPosition.position;
+
         Debug.Log("Teleported");
     }
 }
