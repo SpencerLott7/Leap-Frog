@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour, IGameManager {
 		Debug.Log("Player manager starting...");
 
 		// these values could be initialized with saved data
-		health = 5;
+		health = 0;
 		maxHealth = 5;
 
 		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete
@@ -25,6 +25,9 @@ public class PlayerManager : MonoBehaviour, IGameManager {
 			health = maxHealth;
 		} else if (health < 0) {
 			health = 0;
+		}
+		else{
+			return;
 		}
 
 		Debug.Log($"Health: {health}/{maxHealth}");
