@@ -18,12 +18,12 @@ public class JumpPoints : MonoBehaviour
         points1L.text = "Player 1 has "+Managers.Player.health.ToString();
         points2L.text = "Player 2 has "+Managers.Player2.health.ToString();
         
-        if(Managers.Player.health == 5)
+        if(Managers.Player.health == 1)
         {
             winlabel.text = "Player 1 Has Won The Game!";
             StopGame();
         }
-        if(Managers.Player2.health == 5)
+        if(Managers.Player2.health == 1)
         {
             winlabel.text = "Player 2 Has Won The Game!";
             StopGame();

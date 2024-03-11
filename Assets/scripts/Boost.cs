@@ -11,12 +11,11 @@ public class Boost : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("P1"))
+        if (other.CompareTag("P1"))
         {
-            //Managers.Inventory.AddItem("Apple");
-            //Managers.Player.ChangeHealth(1);
-            //ResetPlayerPosition(P1, start1);
-            other.gameObject.transform.position = start1.position;
+            Managers.Inventory.AddItem("Apple");
+            Managers.Player.ChangeHealth(1);
+            ResetPlayerPosition(P1, start1);
             Debug.Log("here");
         }
         if (other.CompareTag("P2"))
@@ -32,5 +31,6 @@ public class Boost : MonoBehaviour
     private void ResetPlayerPosition(Transform player, Transform startPosition)
     {
         player.position = startPosition.position;
+        Debug.Log("Teleported");
     }
 }
